@@ -24,6 +24,9 @@ public class UIManager : MonoBehaviour
         }
         // 게임 시작 전 일시정지
         Time.timeScale = 0f;
+
+        // playButton 클릭 시 GameStart 실행
+        playButton.onClick.AddListener(GameStart);
     }
 
     public void UpdateTimeText(string time)
