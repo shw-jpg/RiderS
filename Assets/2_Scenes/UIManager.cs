@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     public Text fastTimeText;
     public GameObject panel;
     public Button playButton;
+    public AudioSource startAudioSource; // Inspector에서 할당할 AudioSource
+
     private void Awake()
     {
         if (Instance == null)
@@ -73,6 +75,13 @@ public class UIManager : MonoBehaviour
     {
         HidePanel();
         playButton.gameObject.SetActive(false);
+
+        // 게임 시작 사운드 재생
+        if (startAudioSource != null)
+        {
+            startAudioSource.Play();
+        }
+
         GameManager.Instance.GameStart();
     }
 

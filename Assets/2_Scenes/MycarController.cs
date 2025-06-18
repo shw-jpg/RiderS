@@ -7,7 +7,7 @@ public class MyCarController : MonoBehaviour
     private bool onGround = false;
 
     public float jumpForce = 7f;
-    public float torqueForce = 200;
+    public float torqueForce = 2.5f;
 
     private void Awake()
     {
