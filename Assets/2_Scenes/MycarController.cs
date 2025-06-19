@@ -23,6 +23,14 @@ public class MyCarController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("FinishLine"))
+        {
+            GameManager.Instance.GameEnd();
+        }
+    }
+
     private void Update()
     {
         if (surfaceEffector2D == null) return;

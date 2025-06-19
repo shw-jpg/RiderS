@@ -77,6 +77,13 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.HidePanel();
     }
 
+    public void GameEnd()
+    {
+        // 게임 종료 처리 (예: 일시정지, UI 표시 등)
+        Time.timeScale = 0f;
+        UIManager.Instance.ShowPanel();
+    }
+
     private string FormatElapsedTime(float time)
     {
         int minutes = (int)(time / 60f);
